@@ -21,5 +21,9 @@
       (recur (conj compLi (take-while #(= % (first curLi)) curLi)) (drop-while #(= % (first curLi)) curLi)))))
 
 
-(defn encode[li]
+(defn encode [li]
   (map #(conj (take 1 %)(count %))(pack li)))
+
+
+(defn decode [li]
+  (mapcat #(take (first %) (repeatedly (fn [](second %)))) li))
