@@ -7,3 +7,7 @@
 
 (defn coprime [a b]
   (= (gcd a b) 1))
+
+(defn totient [n]
+  (count (filter #(coprime n %)(take (inc n) (range)))))
+
