@@ -4,4 +4,7 @@
   (take-last 1 li)
 )
 
-(my-last '(a b c d))
+(defn my-but-last [li]
+  (take-last 2 li)
+)
+
