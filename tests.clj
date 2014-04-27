@@ -1,6 +1,9 @@
-(ns lists-tests
+(ns tests
 (:require [clojure.test :refer :all]))
 (load-file "lists.clj")
+(load-file "math.clj")
+
+;lists
 
 (deftest last-box
   (is (= (lists/my-last '(a b c d)) '(d))))
@@ -29,6 +32,11 @@
 
 (deftest repli
   (is (= (lists/repli  '(a b c) 3) '(a a a b b b c c c))))
+
+
+;math
+(deftest Euclidean-gcd
+  (is (= (math/gcd 36 63) 9)))
 
 (run-tests)
 
