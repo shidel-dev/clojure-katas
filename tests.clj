@@ -35,8 +35,12 @@
 
 
 ;math
+
 (deftest Euclidean-gcd
   (is (= (math/gcd 36 63) 9)))
+
+(deftest coprime
+  (is (= (math/coprime 35 64) true)))
 
 (run-tests)
 
