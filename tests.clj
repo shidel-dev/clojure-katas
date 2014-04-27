@@ -5,4 +5,12 @@
 (deftest last-box
   (is (= (lists/my-last '(a b c d)) '(d))))
 
+(deftest last-plus-one-box
+  (is (= (lists/my-but-last '(a b c d)) '(c d))))
+
+
+
+
+
 (run-tests)
+
