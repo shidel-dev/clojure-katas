@@ -15,5 +15,9 @@
     (if (empty? curLi) compLi
       (recur (conj compLi (first curLi)) (drop-while #(= % (first curLi)) curLi)))))
 
+(defn pack [li]
+  (loop [compLi '() curLi (reverse li)]
+    (if (empty? curLi) compLi
+      (recur (conj compLi (take-while #(= % (first curLi)) curLi)) (drop-while #(= % (first curLi)) curLi)))))
 
-(compress '(a a a a b c c a a d e e e e))
+
