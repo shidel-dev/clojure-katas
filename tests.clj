@@ -8,6 +8,13 @@
 (deftest last-plus-one-box
   (is (= (lists/my-but-last '(a b c d)) '(c d))))
 
+(deftest palindrome
+  (is (= (lists/is-palindrome '(a b c b a)) true))
+  (is (= (lists/is-palindrome '(a b c b z)) false))
+)
+
+
+
 
 
 
