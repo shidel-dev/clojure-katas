@@ -8,3 +8,7 @@
   (take-last 2 li)
 )
 
+(defn is-palindrome [li]
+  (= li (reverse li))
+)
+
