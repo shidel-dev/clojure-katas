@@ -27,3 +27,11 @@
 
 (defn decode [li]
   (mapcat #(take (first %) (repeatedly (fn [](second %)))) li))
+
+
+(defn repli [li n]
+  (mapcat #(repeat n %) li))
+
+
+
+
