@@ -42,5 +42,10 @@
 (deftest coprime
   (is (= (math/coprime 35 64) true)))
 
+
+(deftest totient-phi
+  (is (= (math/totient 10) 4)))
+
+
 (run-tests)
 
