@@ -16,6 +16,9 @@
 (deftest compress
    (is (= (lists/compress '(a a a a b c c a a d e e e e)) '(a b c a d e))))
 
+(deftest pack
+   (is (= (lists/pack '(a a a a b c c a a d e e e e)) '((a a a a) (b) (c c) (a a) (d) (e e e e)))))
+
 
 (run-tests)
 
