@@ -10,13 +10,11 @@
 
 (deftest palindrome
   (is (= (lists/is-palindrome '(a b c b a)) true))
-  (is (= (lists/is-palindrome '(a b c b z)) false))
-)
+  (is (= (lists/is-palindrome '(a b c b z)) false)))
 
 
-
-
-
+(deftest compress
+   (is (= (lists/compress '(a a a a b c c a a d e e e e)) '(a b c a d e))))
 
 
 (run-tests)
