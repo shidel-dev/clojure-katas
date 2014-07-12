@@ -11,3 +11,4 @@
 (defn totient [n]
   (count (filter #(coprime n %)(take (inc n) (range)))))
 
+
