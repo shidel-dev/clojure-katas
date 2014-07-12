@@ -54,4 +54,7 @@
   (is (= (algo/collatz 6) 9))
   (is (= (algo/collatz 5) 6)))
 
+(deftest bubble-sort
+  (is (= (algo/bubble-sort [4 8 3 9 2 4 1]) [1 2 3 4 4 8 9])))
+
 (run-tests)

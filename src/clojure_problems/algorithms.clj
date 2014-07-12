@@ -30,6 +30,21 @@
 
 )
 
+; bubble sort
+
+(defn swap [v i j]
+  (-> v (assoc i (v j)) (assoc j (v i))))
+
+(defn bubble-sort [v]
+  (loop [vect v index 0]
+    (cond
+     (= index (-> vect (count) (dec)))
+       vect
+     (> (vect index) (vect (inc index)))
+       (recur (swap vect index (inc index)) 0)
+     :else
+       (recur vect (inc index)))))
+
 ;Collatz Conjecture
 
 (defn even-odd-opps [num]
@@ -44,9 +59,7 @@
 
 
 
-
-
-
+(algo/bubble-sort [3456 4 8 10000 3 9 0 2 500 4 1])
 
 
 
