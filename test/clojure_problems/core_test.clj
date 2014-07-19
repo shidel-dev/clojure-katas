@@ -4,6 +4,7 @@
 (load "lists")
 (load "math")
 (load "algorithms")
+(load "run-length-encoding")
 
 ;lists
 
@@ -56,5 +57,11 @@
 
 (deftest bubble-sort
   (is (= (algo/bubble-sort [4 8 3 9 2 4 1]) [1 2 3 4 4 8 9])))
+
+;run-length-encoding
+
+(deftest run-length-encoding
+  (is (= (rle/encode "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW")"12W1B12W3B24W1B14W"))
+  (is (= (rle/decode "12W1B12W3B24W1B14W") "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW")))
 
 (run-tests)
